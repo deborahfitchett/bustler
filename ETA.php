@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="refresh" content="60">
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="bustler.css" />
 <?php
   $Stop = preg_replace('/[^0-9]/','',$_GET['stop']);
   $WantedRoutes = preg_replace('/[^a-zA-Z0-9]/','+',$_GET['route']);
@@ -18,7 +18,6 @@
 <?php
   $theAPI = "http://rtt.metroinfo.org.nz/rtt/public/utility/file.aspx?ContentType=SQLXML&Name=JPRoutePositionET2&PlatformNo=";
   $theURL = $theAPI.$Stop;
-  $thePath = $Stop.".xml";
   $theXML = simplexml_load_file($theURL);
   $WantedRoutes = explode("+",$WantedRoutes);
 
@@ -94,8 +93,12 @@
   }
 
   echo "<div id='ETA'>\n";
-  $theAlert = displayETAs($theXML,$WantedRoutes,$Wheelchair,$FirstCall,$LastCall);
-  displayAlert($theAlert);
+  if ($Stop != "") {
+    $theAlert = displayETAs($theXML,$WantedRoutes,$Wheelchair,$FirstCall,$LastCall);
+    displayAlert($theAlert);
+  } else {
+    echo "Please specify a stop number.";
+  }
   echo "</div>\n";
 
 ?>
