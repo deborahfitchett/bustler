@@ -5,7 +5,7 @@ Bustler is a PHP/MySQL application using Christchurch's Metroinfo API to let you
 
 Demo
 ----
-http://deborahfitchett.com/toys/bustler/ demonstrates the functionality, including the ability to save favourite locations.
+http://deborahfitchett.com/toys/bustler/ demonstrates the functionality, including the ability to save favourite locations. You can also see a [page with sample configuration](http://deborahfitchett.com/toys/bustler/?stop=38790&route=Oc%2B5%2B40%2B81%2B83%2B88&wheelchair=0&max=10&min=8)
 
 Configuration notes
 -------------------
@@ -17,4 +17,5 @@ Configuration notes
 
 Potential limitations
 ---------------------
-* Has only been tested on servers with PHP Version 5.2.17 / MySQL 5.1.49, and with PHP Version 5.4.4 / MySQL 5.5.25 
+* Has only been tested on servers with PHP Version 5.2.17 / MySQL 5.1.49, and with PHP Version 5.4.4 / MySQL 5.5.25
+* Currently ETA.php refreshes once every 60 seconds; if traffic in your area is particularly prone to unpredictability you might want to make this more frequent.
