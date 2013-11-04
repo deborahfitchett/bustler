@@ -17,5 +17,10 @@ Configuration notes
 
 Potential limitations
 ---------------------
+
 * Has only been tested on servers with PHP Version 5.2.17 / MySQL 5.1.49, and with PHP Version 5.4.4 / MySQL 5.5.25
 * Currently ETA.php refreshes once every 60 seconds; if traffic in your area is particularly prone to unpredictability you might want to make this more frequent.
+
+Data
+----
+Real-time data is sourced from [Metro/ECan's API](http://data.ecan.govt.nz/Catalogue/Method?MethodId=74) and used under Creative Commons Attribution license.

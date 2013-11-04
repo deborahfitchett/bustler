@@ -44,3 +44,9 @@ div#favourites {
 form.favourite {
   display: inline-block;
 }
+
+div#attribution {
+  font-size: smaller;
+  position: absolute;
+  bottom: 0px;
+}

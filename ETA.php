@@ -100,7 +100,7 @@
     echo "Please specify a stop number.";
   }
   echo "</div>\n";
-
+  echo "<div id='attribution'>Uses real-time <a href='http://data.ecan.govt.nz/Catalogue/Method?MethodId=74'>data from Metro/ECan</a> under <a href='http://creativecommons.org/licenses/by/3.0/nz/'>Creative Commons Attribution</a> license.</div>";
 ?>
 
 </body>
