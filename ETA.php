@@ -19,6 +19,8 @@
   $theAPI = "http://rtt.metroinfo.org.nz/rtt/public/utility/file.aspx?ContentType=SQLXML&Name=JPRoutePositionET2&PlatformNo=";
   $theURL = $theAPI.$Stop;
   $theXML = simplexml_load_file($theURL);
+  $WantedRoutes = preg_replace('/O\+/','Oa+Oc+',$WantedRoutes);
+  $WantedRoutes = preg_replace('/O$/','Oa+Oc',$WantedRoutes);
   $WantedRoutes = explode("+",$WantedRoutes);
 
   function getETAs($theXML,$WantedRoutes,$Wheelchair) {
@@ -98,7 +100,7 @@
     echo "Please specify a stop number.";
   }
   echo "</div>\n";
-echo "<div id='attribution'>Uses real-time <a href='http://data.ecan.govt.nz/Catalogue/Method?MethodId=74'>data from Environment Canterbury</a> under <a href='http://creativecommons.org/licenses/by/3.0/nz/'>Creative Commons Attribution</a> license.</div>"
+  echo "<div id='attribution'>Uses real-time <a href='http://data.ecan.govt.nz/Catalogue/Method?MethodId=74'>data from Environment Canterbury</a> under <a href='http://creativecommons.org/licenses/by/3.0/nz/'>Creative Commons Attribution</a> license.</div>"
 ?>
 
 </body>
