@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="60">
+    <meta http-equiv="refresh" content="60" />
     <link rel="stylesheet" type="text/css" href="bustler.css" />
 <?php
   $Stop = preg_replace('/[^0-9]/','',$_GET['stop']);
@@ -30,11 +30,11 @@
     } else {
       foreach ($theXML->Platform[0]->Route as $APIRoute) {
         for ($i=0; $i<count($WantedRoutes); $i++) {
-          if ((string) $APIRoute['RouteNo'] == $WantedRoutes[$i]) {
+          if ((string) $APIRoute['RouteNo'] == $WantedRoutes[$i] || !$WantedRoutes[$i]) {
             $Name = htmlentities((string) $APIRoute['Name']);
             foreach ($APIRoute->Destination[0]->Trip as $Trip) {
               if ($Wheelchair!=1 || (string) $Trip['WheelchairAccess'] == 'true') {
-                $theETAs[] = array($WantedRoutes[$i],$Name,(string) $Trip['ETA']);
+                $theETAs[] = array((string) $APIRoute['RouteNo'],$Name,(string) $Trip['ETA']);	//
               }
             }
           }
@@ -61,8 +61,6 @@
       echo "<p id='bus' class='nobus'>No buses are coming to that stop in the next 30 minutes.</p>";
     } elseif ($theETAs == "nonwanted") {
       echo "<p id='bus' class='nobus'>No buses from the selected route(s) are coming to that stop in the next 30 minutes.</p>";
-    } elseif ($WantedRoutes[0]=="") {
-      echo "<p id='bus' class='nobus'>Please specify a route.</p>";
     } else {
       usort($theETAs, 'numOrder');
       echo "  <table id='bus' class='buses'>\n";
@@ -100,7 +98,7 @@
     echo "Please specify a stop number.";
   }
   echo "</div>\n";
-  echo "<div id='attribution'>Uses real-time <a href='http://data.ecan.govt.nz/Catalogue/Method?MethodId=74'>data from Metro/ECan</a> under <a href='http://creativecommons.org/licenses/by/3.0/nz/'>Creative Commons Attribution</a> license.</div>";
+echo "<div id='attribution'>Uses real-time <a href='http://data.ecan.govt.nz/Catalogue/Method?MethodId=74'>data from Environment Canterbury</a> under <a href='http://creativecommons.org/licenses/by/3.0/nz/'>Creative Commons Attribution</a> license.</div>"
 ?>
 
 </body>
