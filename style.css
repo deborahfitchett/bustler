@@ -1,52 +1,227 @@
-thead {
-  font-weight: bold;
+html {
+	text-align: center;
+	background: url(images/bustler.png) repeat;
 }
 
-.ready {
-  background-color: #ffff00;
+body {
+	width: 100%;
+	max-width: 39rem;
+	min-width: 13rem;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	color: #000066;
 }
 
-div#ETAs {
-  float: left;
-  width: 33%;
-  background-color: #ffffee;
+
+/* General */
+p, li, form {
+	margin: 0 1rem;
+	text-align: left;
+}
+ul, ol, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-object {
-  border: none;
-  height: 300px;
+a, input, select {
+	color: blue;
+	background-color: white;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	font-size: 100%;
+	margin: 0.25rem;
+	border: 1px solid blue;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+	font-stretch: normal;
 }
-
-span#PlainView {
-  align: right;
-  font-size: 80%;
-  font-weight: normal;
+input {
+	text-align: center;
 }
-
-div#config {
-  float: left;
-  width: 33%;
+input[type="text"], select {
+	color: #7777ff;
+}
+input[type="text"]:focus, select:focus {
+	color: #0000ff;
 }
 
 fieldset {
-  border: none;
+	margin: 0;
+	border: none;
+	padding: 0;
 }
 
-input {
-  display: inline-block;
+table {
+	margin: 0 auto;
+}
+th {
+	color: white;
+	background-color: blue;
+	font-size: 110%;
+	font-weight: bold;
+	border-radius: 0.5rem;
+}
+td {
+	text-align: center;
+	padding: 0.25rem 0.5rem;
 }
 
-div#favourites {
-  float: right;
-  width: 33%;
+
+/* Headers */
+h1, h2, h3 {
+	color: white;
+	background-color: blue;
+	margin: 2rem 0.5rem 1rem 0.5rem;
+	border: 1px solid blue;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0.5rem;
+	position: relative;
+	text-align: left;
 }
 
+h1 {
+	font-size: 200%;
+	margin-top: 0.5rem;
+}
+h1 a {
+	color: white;
+	background: none;
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+h2 {
+	font-size: 120%;
+}
+
+h3 {
+	font-size: 110%;
+}
+
+
+/* Navigation */
+#nav ul {
+	margin: 0 0.5rem;
+}
+#nav li {
+	display: inline;
+}
+#nav li a {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+#nav img {
+	background: white;
+	margin: 0.0rem;
+	border: 1px solid blue;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+}
+
+#nav, .bustler {
+	margin-bottom: 50rem;
+}
+.to-top {
+	color: white;
+	background: none;
+	margin: 0;
+	border: none;
+	padding: 0;
+	float: right;
+}
+
+
+/* Favourites */
 form.favourite {
-  display: inline-block;
+	display: inline-block;
+	margin-right: 0;
 }
 
-div#attribution {
-  font-size: smaller;
-  position: absolute;
-  bottom: 0px;
+input.bustler-x {
+	color: #cc0000;
+	margin-right: 0;
+}
+
+#clearall {
+	margin-top: 3rem;
+}
+
+
+/* Settings */
+#locate {
+	text-align: center;
+}
+#geolocate {
+	display: none;
+	margin: 0.25rem;
+}
+#maplocate {
+	display: inline-block;
+	margin: 0.25rem;
+}
+
+td.bustler-stop {
+	color: blue;
+	background-color: white;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	margin: 0.25rem;
+	border: 1px solid blue;
+	border-radius: 0.5rem;
+	padding: 0.25rem;
+}
+td.bustler-stop a {
+	margin: 0;
+	border: none;
+	padding: 0;
+}
+
+#configure {
+	display: block;
+	margin: 0.5rem auto;
+}
+
+
+/* ETAs */
+object {
+	width: 100%;
+	height: 25rem;
+}
+
+#ETA {
+	padding: 0.5rem;
+}
+
+#blurb {
+	margin: 0.5rem;
+}
+
+.nobus {
+	color: #cc0000;
+	margin: 0.5rem;
+}
+li.nobus {
+	list-style-type: disc;
+	margin-left: 3rem;
+	padding-left: 1rem;
+}
+
+.ready p, .ready td {
+	color: #000033;
+	background: yellow;
+	border-radius: 0.5rem;
+}
+
+
+/* About */
+#about p a {
+	background: none;
+	text-decoration: underline;
+	margin: 0;
+	border: none;
+	padding: 0;
 }
