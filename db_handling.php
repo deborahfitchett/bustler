@@ -22,7 +22,7 @@
     }
   }
 
-  function doQuery ($query,$success,$failure) {
+  function doQuery ($query,$success="",$failure="") {
     if (!$dbError = testDB()) {
       $DBarray = getDB();
       mysql_select_db($DBarray[0], $DBarray[1]);
