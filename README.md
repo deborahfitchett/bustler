@@ -12,6 +12,7 @@ Configuration notes
 -------------------
 
 You can store favourites either with cookies or in a MySQL database:
+
 1. With cookies: use index-cookies.php. You won't need index-database.php or db_handling.php.
 2. In a MySQL database: use index-database.php (you may want to edit the table and field names in variables $favTable, $favID, $favLabel, $favLink) and db_handling.php (you'll need to add your username/password/database/host details). You won't need index-cookies.php.
 3. Note, if renaming the stylesheet, that both index-cookies.php/index-database.php and ETA.php point to it.
