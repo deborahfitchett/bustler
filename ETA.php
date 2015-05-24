@@ -77,7 +77,7 @@
 		if ($Wheelchair==1) {
 				echo " with space for wheelchairs";
 		}
-		echo " arriving at stop #<strong>".$Stop."</strong> in the next 30 minutes";
+		echo " arriving at stop #<strong>".$Stop."</strong> in the next 60 minutes";
 		if ($FirstCall > 0) {
 			if (!$LastCall) { $LastCall = 0; }
 			echo ", with alerts once a minute when a bus is between <strong>".$LastCall."-".$FirstCall."</strong> minutes away";
