@@ -92,7 +92,7 @@
 		if ($theETAs == "invalid") {
 			echo "<p class='nobus'>No real-time data found. Either:</p><ul><li class='nobus'>that stop number doesn't exist;</li><li class='nobus'>your network connection is down; or</li><li class='nobus'>Environment Canterbury's data is temporarily unavailable.</li></ul>";
 		} elseif ($theETAs == "empty") {
-			echo "<p class='nobus'>No buses are coming to that stop in the next 30 minutes.</p>";
+			echo "<p class='nobus'>No buses are coming to that stop in the next 60 minutes.</p>";
 		} elseif ($theETAs == "nonwanted") {
 			echo "<p class='nobus'>No buses from the selected route(s) are coming to that stop in the next 30 minutes.</p>";
 		} else {
